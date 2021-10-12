@@ -38,15 +38,19 @@ public class TestEjercicio1 {
 		Function<String, Integer> longitudDeCadena = s -> s.length();
 		
 		for (String s: lineasFichero) {
+			if (s.contains("// ")) {
+				continue;
+			}
 			List<String> splittedWords = Arrays.asList(s.split(","));
 
 			System.out.println("Entrada: " + splittedWords.toString());
-			System.out.println("1. Iterative (while): " + 
+			System.out.println("1. Iterativa (while): " + 
 					Ejercicio1.iterativa(splittedWords, contieneVocales, esPar, longitudDeCadena));
 			System.out.println("2. Recursiva final: " + 
 					Ejercicio1.recursiva(splittedWords, contieneVocales, esPar, longitudDeCadena));
 			System.out.println("3. Funcional: " + 
 					Ejercicio1.funcional(splittedWords, contieneVocales, esPar, longitudDeCadena));
+			System.out.println("\n");
 		}
 	}
 }
