@@ -21,6 +21,21 @@ public class Ejercicio1 {
 	
 	public static boolean iterativa(List<String> ls, Predicate<String> pS,
 			Predicate<Integer> pI, Function<String,Integer> f) {
-		return true;
+		Integer loop = 0;
+		Boolean match = false;
+
+		while (loop < ls.size() || match) {
+			String str = ls.get(loop);
+			loop++;
+
+			if (!pS.test(str)) {
+				continue;
+			}
+			
+			Integer result = f.apply(str);
+			match = pI.test(result);
+		}
+
+		return match;
 	}
 }
