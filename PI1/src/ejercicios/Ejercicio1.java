@@ -16,15 +16,17 @@ public class Ejercicio1 {
 	
 	public static boolean recursiva(List<String> ls, Predicate<String> pS,
 			Predicate<Integer> pI, Function<String,Integer> f) {
+		
 		return true;
 	}
 	
 	public static boolean iterativa(List<String> ls, Predicate<String> pS,
 			Predicate<Integer> pI, Function<String,Integer> f) {
 		Integer loop = 0;
+		Integer listSize = ls.size();
 		Boolean match = false;
 
-		while (loop < ls.size() || match) {
+		while (loop < listSize || match) {
 			String str = ls.get(loop);
 			loop++;
 
