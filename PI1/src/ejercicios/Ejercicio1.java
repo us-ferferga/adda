@@ -1,0 +1,26 @@
+package ejercicios;
+
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
+
+public class Ejercicio1 {
+	// Método provisto en el enunciado
+	public static boolean funcional(List<String> ls, Predicate<String> pS,
+			Predicate<Integer> pI, Function<String,Integer> f) {
+		return ls.stream()
+				.filter(pS)
+				.map(f)
+				.anyMatch(pI);
+	}
+	
+	public static boolean recursiva(List<String> ls, Predicate<String> pS,
+			Predicate<Integer> pI, Function<String,Integer> f) {
+		return true;
+	}
+	
+	public static boolean iterativa(List<String> ls, Predicate<String> pS,
+			Predicate<Integer> pI, Function<String,Integer> f) {
+		return true;
+	}
+}
