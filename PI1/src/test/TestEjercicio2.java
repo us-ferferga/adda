@@ -1,10 +1,7 @@
-package tests;
+package test;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import ejercicios.Ejercicio2;
@@ -28,7 +25,7 @@ public class TestEjercicio2 {
 		System.out.println("");
 	}
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		PrintWelcome();
 
 		List<String> lineasFichero1 = Helper.leerLineas(
