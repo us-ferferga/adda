@@ -1,5 +1,7 @@
 package ejercicios;
 
+import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
 public class Ejercicio4 {
@@ -19,7 +21,16 @@ public class Ejercicio4 {
 
 	public static Double funcional(Double number, Double error) {
 		ComprobarVariables(error);
-		return Stream.iterate();
+		Double x = 0.0;
+		Double a = number;
+		Double b = number / 2;
+
+		UnaryOperator<Double[]> iteracion = p -> (cubo(p[2]) > number) ? new Double[] { p[0], p[2], (p[0] + p[1]) / 2 }
+				: new Double[] { p[2], p[1], (p[0] + p[1]) / 2 };
+		Predicate<Double[]> filtro = p -> Math.abs(number - cubo(p[2])) < error;
+
+		return Stream.iterate(new Double[] { x, a, b }, iteracion).filter(filtro).findFirst().get()[2];
+
 	}
 
 	private static Double recursiva_interna(Double x, Double a, Double b, Double number, Double error) {
