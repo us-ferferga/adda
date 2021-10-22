@@ -27,7 +27,7 @@ public class TestEjercicio4 {
 			Double number = Double.parseDouble(splittedString.get(0));
 			Double error = Double.parseDouble(splittedString.get(1));
 
-			System.out.println("Entrada: " + s);
+			System.out.println("Entrada: " + splittedString);
 			System.out.println("1. Iterativa (while): " + Ejercicio4.iterativa(number, error));
 			System.out.println("2. Recursiva final: " + Ejercicio4.recursiva(number, error));
 			System.out.println("3. Funcional: " + Ejercicio4.funcional(number, error));

@@ -27,7 +27,7 @@ public class TestEjercicio3 {
 			Integer a = Integer.parseInt(splittedString.get(0));
 			Integer limit = Integer.parseInt(splittedString.get(1));
 
-			System.out.println("Entrada: " + s);
+			System.out.println("Entrada: " + splittedString);
 			System.out.println("1. Iterativa (while): " + Ejercicio3.iterativa(a, limit));
 			System.out.println("2. Recursiva final: " + Ejercicio3.recursiva(a, limit));
 			System.out.println("3. Funcional: " + Ejercicio3.funcional(a, limit));

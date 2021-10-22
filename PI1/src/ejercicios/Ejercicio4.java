@@ -6,11 +6,7 @@ import java.util.stream.Stream;
 
 public class Ejercicio4 {
 	private static Double cubo(Double n) {
-		return n * n * n;
-	}
-
-	private static Double error_newton(Double inicial, Double ultima) {
-		return Math.abs(inicial - ultima) / Math.abs(ultima);
+		return Math.pow(n, 3);
 	}
 
 	private static void ComprobarVariables(Double error) {
