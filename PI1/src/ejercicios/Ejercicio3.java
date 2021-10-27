@@ -16,22 +16,23 @@ public class Ejercicio3 {
 				.collect(Collectors.toList()).toString();
 	}
 
-	private static void recursiva_interna(List<Par<Integer, Integer>> lista, Integer limit) {
+	private static List<Par<Integer, Integer>> recursiva_interna(List<Par<Integer, Integer>> lista, Integer limit) {
 		var t = lista.get(lista.size() - 1);
 		var p = Par.of(t.v1() + 1, t.v1() % 3 == 1 ? t.v2() : t.v1() + t.v2());
 		lista.add(p);
 
 		if (limit > 0) {
-			recursiva_interna(lista, limit - 1);
+			return recursiva_interna(lista, limit - 1);
 		}
+
+		return lista;
 	}
 
 	public static String recursiva(Integer a, Integer limit) {
 		List<Par<Integer, Integer>> lista = new ArrayList<Par<Integer, Integer>>();
 		lista.add(Par.of(0, a));
 
-		recursiva_interna(lista, limit - 2);
-		return lista.toString();
+		return recursiva_interna(lista, limit - 2).toString();
 	}
 
 	public static String iterativa(Integer a, Integer limit) {

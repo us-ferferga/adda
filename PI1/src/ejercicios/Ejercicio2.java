@@ -12,44 +12,38 @@ public class Ejercicio2 {
 		return listas.stream().flatMap(lista -> lista.stream()).collect(Collectors.groupingBy(String::length));
 	}
 
-	private static void recursiva_nivel2(List<String> lista, Integer index, Map<Integer, List<String>> result) {
-		Integer listSize = lista.size();
-
-		if (index > listSize - 1) {
-			return;
-		}
-
-		String str = lista.get(index);
-		Integer strlen = str.length();
-		if (result.containsKey(strlen)) {
-			result.get(strlen).add(str);
-		} else {
-			List<String> newList = new ArrayList<String>();
-			newList.add(str);
-			result.put(strlen, newList);
-		}
-
-		recursiva_nivel2(lista, index + 1, result);
-	}
-
-	private static void recursiva_nivel1(List<List<String>> listas, Integer index, Map<Integer, List<String>> result) {
+	private static Map<Integer, List<String>> recursiva_interna(List<List<String>> listas, Integer index,
+			Integer subindex, Map<Integer, List<String>> result) {
 
 		Integer listSize = listas.size();
 
 		if (index > listSize - 1) {
-			return;
-		}
+			return result;
+		} else {
+			List<String> sublist = listas.get(index);
 
-		List<String> sublist = listas.get(index);
-		recursiva_nivel2(sublist, 0, result);
-		recursiva_nivel1(listas, index + 1, result);
+			if (subindex > sublist.size() - 1) {
+				return recursiva_interna(listas, index + 1, 0, result);
+			}
+
+			String str = sublist.get(subindex);
+			Integer strlen = str.length();
+
+			if (result.containsKey(strlen)) {
+				result.get(strlen).add(str);
+			} else {
+				List<String> newList = new ArrayList<String>();
+				newList.add(str);
+				result.put(strlen, newList);
+			}
+			return recursiva_interna(listas, index, subindex + 1, result);
+		}
 	}
 
 	public static Map<Integer, List<String>> recursiva(List<List<String>> listas) {
 		Map<Integer, List<String>> result = new HashMap<Integer, List<String>>();
 
-		recursiva_nivel1(listas, 0, result);
-		return result;
+		return recursiva_interna(listas, 0, 0, result);
 	}
 
 	public static Map<Integer, List<String>> iterativa(List<List<String>> listas) {
