@@ -1,4 +1,4 @@
 module PI2 {
-	requires partecomun;
-	requires datos_compartidos;
+	requires transitive partecomun;
+	requires transitive datos_compartidos;
 }
