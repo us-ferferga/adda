@@ -1,0 +1,2 @@
+Get-ChildItem -Path . -Filter bin -Recurse -ErrorAction SilentlyContinue -Force | ForEach-Object { Remove-Item -Recurse -Force -LiteralPath $_.FullName }
+Get-ChildItem -Path . -Filter target -Recurse -ErrorAction SilentlyContinue -Force | ForEach-Object { Remove-Item -Recurse -Force -LiteralPath $_.FullName }
