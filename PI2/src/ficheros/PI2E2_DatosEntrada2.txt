@@ -1,8 +1,8 @@
-Para abordar el diseño de algoritmos es necesario
-tener asimilados los elementos de la programación en
-algún lenguaje. Para seguir el contenido hace falta
+Para abordar el diseÃ±o de algoritmos es necesario
+tener asimilados los elementos de la programaciÃ³n en
+algÃºn lenguaje. Para seguir el contenido hace falta
 conocer el lenguaje Java y sus peculiaridades. Aprenderemos
-las técnicas para el diseño de algoritmos iterativos,
-las técnicas de diseño de algoritmos recursivos, su
-análisis y las transformaciones de un tipo de
+las tÃ©cnicas para el diseÃ±o de algoritmos iterativos,
+las tÃ©cnicas de diseÃ±o de algoritmos recursivos, su
+anÃ¡lisis y las transformaciones de un tipo de
 algoritmo en otros. Al final se incluyen ejemplos
