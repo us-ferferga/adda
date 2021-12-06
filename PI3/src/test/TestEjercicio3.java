@@ -20,7 +20,7 @@ public class TestEjercicio3 {
 				.leerLineas(System.getProperty("user.dir") + "\\src\\ficheros\\PI3E3_DatosEntrada.txt");
 		
 		// Conversión a árboles binarios
-				List<BinaryTree<Integer>> arboles = lineasFichero.stream()
+		List<BinaryTree<Integer>> arboles = lineasFichero.stream()
 															.map(s -> BinaryTree.parse(s, i -> Integer.parseInt(i)))
 															.collect(Collectors.toUnmodifiableList());
 
