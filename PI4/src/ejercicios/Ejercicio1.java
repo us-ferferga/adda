@@ -53,7 +53,7 @@ public class Ejercicio1 {
 
 	public static Map<Investigador, List<Investigador>> c(Graph<Investigador, PublicacionesComunes> graph,
 			String salidaVistas) {
-		Map<Investigador, List<Investigador>> mp = new HashMap<>();
+		Map<Investigador, List<Investigador>> mp = new HashMap<Investigador, List<Investigador>>();
 		Set<Investigador> investigadores = graph.vertexSet();
 
 		for (Investigador i : investigadores) {
@@ -66,7 +66,7 @@ public class Ejercicio1 {
 			}
 		}
 
-		List<PublicacionesComunes> masPublicacionesCompartidas = new ArrayList<>();
+		List<PublicacionesComunes> masPublicacionesCompartidas = new ArrayList<PublicacionesComunes>();
 		for (Entry<Investigador, List<Investigador>> keyValue : mp.entrySet()) {
 			Investigador i = keyValue.getValue().get(0);
 			Investigador IPublicacion = graph.vertexSet().stream().filter(v -> v.equals(i)).findFirst().get();
@@ -82,7 +82,7 @@ public class Ejercicio1 {
 	}
 
 	public static void d(Graph<Investigador, PublicacionesComunes> graph, String salidaVistas) {
-		DijkstraShortestPath<Investigador, PublicacionesComunes> shtpath = new DijkstraShortestPath<>(graph);
+		DijkstraShortestPath<Investigador, PublicacionesComunes> shtpath = new DijkstraShortestPath<Investigador, PublicacionesComunes>(graph);
 		Set<Investigador> investigadores = graph.vertexSet();
 		GraphPath<Investigador, PublicacionesComunes> gpath = null;
 
@@ -126,8 +126,8 @@ public class Ejercicio1 {
 			}
 		}
 
-		GreedyColoring grcoloring = new GreedyColoring<>(copia);
-		Coloring coloring = grcoloring.getColoring();
+		GreedyColoring<Investigador, PublicacionesComunes> grcoloring = new GreedyColoring<Investigador, PublicacionesComunes>(copia);
+		Coloring<Investigador> coloring = grcoloring.getColoring();
 		Map<Investigador, Integer> colors = coloring.getColors();
 		Map<Investigador, String> attendeeName = new HashMap<Investigador, String>();
 		List<Set<Investigador>> asistentes = coloring.getColorClasses();

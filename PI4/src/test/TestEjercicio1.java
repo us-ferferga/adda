@@ -14,12 +14,10 @@ public class TestEjercicio1 {
 	public static void main(String[] args) {
 		String path = System.getProperty("user.dir") + "\\src\\ficheros\\PI4E1_DatosEntrada.txt";
 		
-		Graph<Investigador, PublicacionesComunes> graph = GraphsReader.newGraph(path, 
-				 Investigador::fromArray, 
-				 PublicacionesComunes::fromArray, 
-				 Graphs2::simpleWeightedGraph, 
-				 a -> Double.valueOf(a.getCount()));
+		Graph<Investigador, PublicacionesComunes> graph = GraphsReader.newGraph(path, Investigador::fromArray,
+				PublicacionesComunes::fromArray, Graphs2::simpleWeightedGraph, a -> Double.valueOf(a.getCount()));
 
+		System.out.println("-- EJERCICIO 1 --");
 		// Apartado A
 		String rutaSalidaA = System.getProperty("user.dir") + "\\src\\ficheros\\PI4E1_ApartadoA.gv";
 		new File(rutaSalidaA).delete();
