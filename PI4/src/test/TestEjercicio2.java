@@ -15,7 +15,7 @@ public class TestEjercicio2 {
 	private static SimpleDirectedGraph<String, DefaultEdge> getGrafo(String path) {
 		List<String> lines = Helper.leerLineas(path);
 
-		SimpleDirectedGraph<String, DefaultEdge> graph = new SimpleDirectedGraph<>(String::new, DefaultEdge::new,
+		SimpleDirectedGraph<String, DefaultEdge> graph = new SimpleDirectedGraph<String, DefaultEdge>(String::new, DefaultEdge::new,
 				false);
 
 		for (String a : lines) {
