@@ -1,0 +1,36 @@
+strict graph G {
+  1 [ color="red" style="filled" label="4, 3 -> 0" ];
+  2 [ color="red" style="filled" label="1, 2 -> 0" ];
+  3 [ color="red" style="filled" label="1, 6 -> 0" ];
+  4 [ color="red" style="filled" label="2, 3 -> 0" ];
+  5 [ color="orange" style="filled" label="4, 5 -> 2" ];
+  6 [ color="orange" style="filled" label="2, 2 -> 1" ];
+  7 [ color="orange" style="filled" label="5, 6 -> 3" ];
+  8 [ color="orange" style="filled" label="2, 4 -> 1" ];
+  9 [ color="orange" style="filled" label="4, 6 -> 3" ];
+  10 [ color="orange" style="filled" label="4, 4 -> 1" ];
+  11 [ color="orange" style="filled" label="4, 1 -> 2" ];
+  12 [ color="orange" style="filled" label="1, 4 -> 1" ];
+  13 [ color="orange" style="filled" label="3, 2 -> 1" ];
+  14 [ color="orange" style="filled" label="3, 4 -> 1" ];
+  1 -- 10 [ color="blue" label="0,700" ];
+  1 -- 13 [ color="blue" label="0,990" ];
+  1 -- 14 [ color="blue" label="0,990" ];
+  2 -- 4 [ color="blue" label="0,990" ];
+  2 -- 6 [ color="blue" label="0,700" ];
+  4 -- 6 [ color="blue" label="0,700" ];
+  4 -- 8 [ color="blue" label="0,700" ];
+  4 -- 12 [ color="blue" label="0,990" ];
+  4 -- 13 [ color="blue" label="0,990" ];
+  4 -- 14 [ color="blue" label="0,990" ];
+  5 -- 7 [ color="blue" label="0,990" ];
+  5 -- 9 [ color="blue" label="0,700" ];
+  5 -- 10 [ color="blue" label="0,700" ];
+  5 -- 14 [ color="blue" label="0,990" ];
+  6 -- 13 [ color="blue" label="0,700" ];
+  7 -- 9 [ color="blue" label="0,700" ];
+  8 -- 12 [ color="blue" label="0,700" ];
+  8 -- 14 [ color="blue" label="0,700" ];
+  10 -- 14 [ color="blue" label="0,700" ];
+  11 -- 13 [ color="blue" label="0,990" ];
+}
