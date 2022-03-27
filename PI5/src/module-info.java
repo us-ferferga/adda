@@ -1,6 +1,11 @@
 module PI5 {
-	requires transitive partecomun;
-	requires transitive datos_compartidos;
 	requires transitive grafos;
-	requires org.jgrapht.core;
+	requires transitive partecomun;
+	requires transitive solve;
+	requires transitive geneticos;
+
+	exports ejercicios.ejercicio1;
+	exports ejercicios.ejercicio2;
+	exports ejercicios.ejercicio3;
+	exports ejercicios.ejercicio4;
 }

@@ -1,0 +1,25 @@
+head section
+
+Integer lenCandidatos()
+Integer lenCualidades()
+Integer getPresupuesto()
+Integer valorCandidato(Integer i)
+Integer sueldoMin(Integer i)
+Boolean esIncompatible(Integer i, Integer k)
+Integer cualidadCubierta(Integer i, Integer j)
+
+Integer n = lenCandidatos()
+Integer m = lenCualidades()
+
+goal section
+
+max sum(valorCandidato(i) x[i], i in 0 .. n)
+
+constraints section
+
+sum(cualidadCubierta(i,j) x[i], i in 0 .. n) >= 1, j in 0 .. m
+sum(sueldoMin(i) x[i], i in 0 .. n) <= getPresupuesto()
+x[i] + x[k] <= 1, i in 0 .. n, k in 0 .. n | esIncompatible(i,k)
+
+bin
+x[i], i in 0 .. n

@@ -1,0 +1,22 @@
+head section
+
+Integer lenFicheros()
+Integer lenMemorias()
+Integer fileSize(Integer i)
+Integer memStorage(Integer j)
+Integer maxSize(Integer j)
+Integer n = lenFicheros()
+Integer m = lenMemorias()
+
+goal section
+
+max sum(x[i,j], i in 0 .. n, j in 0 .. m)
+
+constraints section
+
+sum(x[i,j], j in 0 .. m) <= 1, i in 0 .. n
+fileSize(i) x[i,j] <= maxSize(j), i in 0 .. n, j in 0 .. m
+sum(fileSize(i) x[i,j], i in 0 .. n) <= memStorage(j), j in 0 .. m
+
+bin
+x[i,j], i in 0 .. n, j in 0 .. m
