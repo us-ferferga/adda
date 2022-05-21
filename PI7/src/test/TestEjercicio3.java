@@ -13,12 +13,11 @@ public class TestEjercicio3 {
 	private static void PD() {
 		ProgramacionDinamica.pd(Modelo.getTotalProd(), Modelo.getTotalManual());
 		Solucion s = ProgramacionDinamica.solucion();
-		
+
 		if (s != null) {
 			System.out.println("#### Algoritmo PD ####");
 			System.out.println(s);
-		}
-		else {
+		} else {
 			System.out.println("No hay solucion");
 		}
 	}
@@ -28,7 +27,7 @@ public class TestEjercicio3 {
 			String inputPath = System.getProperty("user.dir") + "\\tests\\PI7Ej3DatosEntrada" + i + ".txt";
 			System.out.println("Para el fichero PI7Ej3DatosEntrada" + i + ".txt");
 			List<String> lineas = Helper.leerLineas(inputPath);
-			
+
 			Vertice.from(lineas);
 			PD();
 		}

@@ -27,7 +27,7 @@ public record Vertice(Integer index, List<Integer> as, Integer presupRestante) {
 	public static Predicate<Vertice> goal() {
 		return v -> v.index() == Modelo.lenCandidatos();
 	}
-	
+
 	/**
 	 * 1. Candidato escogido. 0: Candidato no escogido
 	 */

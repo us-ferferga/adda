@@ -15,19 +15,19 @@ public class Modelo {
 	public static Integer lenMemorias() {
 		return memorias.size();
 	}
-	
+
 	public static List<Memoria> getMemorias() {
 		return new ArrayList<Memoria>(memorias);
 	}
-	
+
 	public static List<Fichero> getFicheros() {
 		return new ArrayList<Fichero>(ficheros);
 	}
-	
+
 	public static Fichero getFichero(Integer i) {
 		return ficheros.get(i);
 	}
-	
+
 	public static Memoria getMemoria(Integer i) {
 		return memorias.get(i);
 	}
@@ -43,8 +43,8 @@ public class Modelo {
 	public static Integer maxSize(Integer j) {
 		return memorias.get(j).maxSize();
 	}
-	
-	public static List<Integer> capacidadesIniciales(){
+
+	public static List<Integer> capacidadesIniciales() {
 		return memorias.stream().map(m -> m.storage()).toList();
 	}
 

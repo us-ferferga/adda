@@ -45,11 +45,11 @@ public class Modelo {
 	public static Integer getPrecio(Integer i) {
 		return productos.get(i).precio();
 	}
-	
+
 	public static Producto getProducto(Integer i) {
 		return productos.get(i);
 	}
-	
+
 	public static List<Producto> getProductos() {
 		return new ArrayList<Producto>(productos);
 	}

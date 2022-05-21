@@ -28,19 +28,19 @@ public class Modelo {
 	public static Double sueldoMin(Integer i) {
 		return candidatos.get(i).sueldoMin();
 	}
-	
+
 	public static List<String> cualidades(Integer i) {
 		return candidatos.get(i).cualidades();
 	}
-	
+
 	public static List<Candidato> getCandidatos() {
 		return new ArrayList<Candidato>(candidatos);
 	}
-	
+
 	public static List<String> getCualidadesDeseadas() {
 		return new ArrayList<String>(cualidadesDeseadas);
 	}
-	
+
 	public static Candidato getCandidato(Integer i) {
 		return candidatos.get(i);
 	}

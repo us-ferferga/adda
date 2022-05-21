@@ -16,8 +16,7 @@ public class TestEjercicio4 {
 		if (s != null) {
 			System.out.println("#### Algoritmo PD ####");
 			System.out.println(s);
-		}
-		else {
+		} else {
 			System.out.println("No hay solucion");
 		}
 	}

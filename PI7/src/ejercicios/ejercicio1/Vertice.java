@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public record Vertice(Integer index, List<Integer> capacidadRestante) {
-	
+
 	public static List<Integer> capacidadInicial;
 
 	@SuppressWarnings("static-access")

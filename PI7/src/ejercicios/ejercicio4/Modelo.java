@@ -27,15 +27,15 @@ public class Modelo {
 	public static Boolean esCompatible(Integer i, Integer j) {
 		return elementos.get(i).tipos().contains(contenedores.get(j).tipo());
 	}
-	
+
 	public static Contenedor getContenedor(Integer i) {
 		return contenedores.get(i);
 	}
-	
+
 	public static Elemento getElemento(Integer i) {
 		return elementos.get(i);
 	}
-	
+
 	public static List<Contenedor> getContenedores() {
 		return new ArrayList<Contenedor>(contenedores);
 	}

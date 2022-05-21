@@ -33,13 +33,12 @@ public record Candidato(Integer id, List<String> cualidades, Double sueldoMin, I
 		String prefix = this.id() < 10 ? "C0" : "C";
 		List<String> arrayString = new ArrayList<String>();
 
-		for (Integer i: this.incompatibilidades) {
+		for (Integer i : this.incompatibilidades) {
 			String prefix2 = i < 10 ? "C0" : "C";
 			arrayString.add(prefix2 + i);
 		}
 
-		return String.format(prefix + "%d: %s; %s; %s; %s", id(), cualidades(), sueldoMin(), valoracion(),
-				arrayString);
+		return String.format(prefix + "%d: %s; %s; %s; %s", id(), cualidades(), sueldoMin(), valoracion(), arrayString);
 	}
 
 	@Override

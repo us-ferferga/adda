@@ -13,7 +13,7 @@ public class Heuristica {
 
 		return r;
 	}
-	
+
 	public static Integer dimension(Vertice v, Integer a) {
 		Vertice vecino = v.neighbor(a);
 		Integer dimension;

@@ -14,11 +14,10 @@ public class TestEjercicio1 {
 	private static void BT() {
 		BackTracking.search(Modelo.capacidadesIniciales());
 		Solucion s = BackTracking.soluciones.stream().max(Comparator.comparing(x -> x.getSize())).orElse(null);
-		
+
 		if (s != null) {
 			System.out.println("#### Algoritmo BT ####");
 			System.out.println(s);
-			
 		} else {
 			System.out.println("No hay solucion");
 		}

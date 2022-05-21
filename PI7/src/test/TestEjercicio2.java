@@ -19,7 +19,6 @@ public class TestEjercicio2 {
 		if (s != null) {
 			System.out.println("#### Algoritmo BT ####");
 			System.out.println(s);
-
 		} else {
 			System.out.println("No hay solucion");
 		}

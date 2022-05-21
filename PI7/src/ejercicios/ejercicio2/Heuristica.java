@@ -13,7 +13,7 @@ public class Heuristica {
 
 		return h;
 	}
-	
+
 	public static Integer dimension(Vertice v, Integer a) {
 		return heuristic(v.neighbor(a)) + a * Modelo.valorCandidato(v.index());
 	}
