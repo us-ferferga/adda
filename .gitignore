@@ -3,10 +3,3 @@
 .mvn
 bin/
 target/
-
-
-### Entradas personalizadas ###
-
-# Evita que se haga commit del repositorio con las dependencias externas de cada
-# una de las prácticas. Estas dependencias se pueden encontrar en https://github.com/migueltoro/adda2122
-adda2122
